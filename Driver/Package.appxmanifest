@@ -7,7 +7,7 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="8b9f75cb-b2a2-4edb-9841-f798ab3a6d8d"
+    Name="Driver"
     Publisher="CN=adelh"
     Version="1.0.0.0" />
 

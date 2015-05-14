@@ -180,7 +180,37 @@ namespace Driver
 
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                this.textBoxDirection.Text = sender.Direction.ToString();
+                switch (sender.Direction)
+                {
+                    case ControllerDirection.None:
+                        break;
+                    case ControllerDirection.Up:
+                        Speed(0.5);
+                        break;
+                    case ControllerDirection.UpRight:
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
+                        break;
+                    case ControllerDirection.Right:
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
+                        break;
+                    case ControllerDirection.DownRight:
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
+                        break;
+                    case ControllerDirection.Down:
+                        Speed(2);
+                        break;
+                    case ControllerDirection.DownLeft:
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
+                        break;
+                    case ControllerDirection.Left:
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
+                        break;
+                    case ControllerDirection.UpLeft:
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
+                        break;
+                    default:
+                        break;
+                }
             });
         }
 
@@ -261,11 +291,9 @@ namespace Driver
                 FlipLED();
             });
 
-            textBoxVoteResults.Text = "";
-
             var httpClient = new HttpClient();
             var voteServiceResponseAsString = await httpClient.GetStringAsync("http://votes.api.ninemsn.com.au/network/questions/302121B3-9A01-4F4C-B891-FC182F13A16C");
-            await Task.Delay(TimeSpan.FromSeconds(2));
+            //await Task.Delay(TimeSpan.FromSeconds(2));
 
             var definition = new[] { new { answers = new[] { new { id = string.Empty, count = string.Empty, percent = string.Empty, percentMax = string.Empty } } } };
             var voteServiceResponse = definition;
@@ -298,7 +326,17 @@ namespace Driver
                 answer2ThisCount = answer2NewCount - answer2Count;
             answer2Count = answer2NewCount;
 
-            textBoxVoteResults.Text = String.Format("Answer1 - Total Count: {0}, Last Count: {1};  Answer2 - Total Count: {2}, Last Count: {3}", answer1Count, answer1ThisCount, answer2Count, answer2ThisCount);
+            if(answer1ThisCount + answer2ThisCount > 0)
+            {
+                if (answer1ThisCount > answer2ThisCount)
+                {
+                    ApproachStoryboard_Beginning(RockImage);
+                }
+                else
+                {
+                    ApproachStoryboard_Beginning(TreeImage);
+                }
+            }
 
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
