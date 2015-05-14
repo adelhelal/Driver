@@ -41,6 +41,9 @@
             <StackPanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Resources/sky.png"/>
             </StackPanel.Background>
+            <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="20" Height="20" Margin="10"/>
+            <TextBox x:Name="textBoxDirection" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+            <TextBox x:Name="textBoxVoteResults" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
             <Button x:Name="TreeButton" Content="Tree" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="TreeButton_Click"/>
             <Button x:Name="RockButton" Content="Rock" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="RockButton_Click"/>
             <Button x:Name="LeftButton" Content="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="LeftButton_Click"/>
