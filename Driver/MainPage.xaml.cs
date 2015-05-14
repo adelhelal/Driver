@@ -22,6 +22,8 @@ namespace Driver
     {
         public bool Approaching { get; set; }
 
+        public ControllerDirection ControllerDirection { get; set; }
+
         public static bool FoundLocalControlsWorking = false;
 
         private static XboxHidController controller;
@@ -175,6 +177,11 @@ namespace Driver
         }
         private async void Controller_DirectionChanged(ControllerVector sender)
         {
+            if (sender.Direction == this.ControllerDirection)
+            {
+                return;
+            }
+
             FoundLocalControlsWorking = true;
             Debug.WriteLine("Direction: " + sender.Direction + ", Magnitude: " + sender.Magnitude);
 
