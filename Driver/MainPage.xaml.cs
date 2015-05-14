@@ -1,5 +1,4 @@
-﻿
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
 using System.Net.Http;
@@ -24,7 +23,7 @@ namespace Driver
 
         public ControllerDirection ControllerDirection { get; set; }
 
-        public static bool FoundLocalControlsWorking = false;
+        //public static bool FoundLocalControlsWorking = false;
 
         private static XboxHidController controller;
         private static int lastControllerCount = 0;
@@ -51,43 +50,13 @@ namespace Driver
             this.XboxJoystickInit();
 
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(10000);
+            timer.Interval = TimeSpan.FromMilliseconds(5000);
             timer.Tick += Timer_Tick;
             timer.Start();
 
-            Unloaded += MainPage_Unloaded;
+            //Unloaded += MainPage_Unloaded;
 
             InitGPIO();
-        }
-
-        private void TreeButton_Click(object sender, RoutedEventArgs e)
-        {
-            ApproachStoryboard_Beginning(TreeImage);
-        }
-
-        private void RockButton_Click(object sender, RoutedEventArgs e)
-        {
-            ApproachStoryboard_Beginning(RockImage);
-        }
-
-        private void LeftButton_Click(object sender, RoutedEventArgs e)
-        {
-            ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
-        }
-
-        private void RightButton_Click(object sender, RoutedEventArgs e)
-        {
-            ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
-        }
-
-        private void SpeedDownButton_Click(object sender, RoutedEventArgs e)
-        {
-            Speed(2);
-        }
-
-        private void SpeedUpButton_Click(object sender, RoutedEventArgs e)
-        {
-            Speed(0.5);
         }
 
         async private void ApproachStoryboard_Completed(object sender, object e)
@@ -122,6 +91,11 @@ namespace Driver
         private void Speed(double speed)
         {
             foreach (var animation in ApproachStoryboard.Children)
+            {
+                animation.Duration = new Duration(TimeSpan.FromSeconds(speed));
+            }
+
+            foreach (var animation in DriveStoryboard.Children)
             {
                 animation.Duration = new Duration(TimeSpan.FromSeconds(speed));
             }
@@ -160,7 +134,7 @@ namespace Driver
                         if (!deviceAccessStatus.Equals(DeviceAccessStatus.Allowed))
                         {
                             Debug.WriteLine("DeviceAccess: " + deviceAccessStatus.ToString());
-                            FoundLocalControlsWorking = true;
+                            //FoundLocalControlsWorking = true;
                         }
                     }
                     catch (Exception e)
@@ -177,42 +151,30 @@ namespace Driver
         }
         private async void Controller_DirectionChanged(ControllerVector sender)
         {
+            //Debug.WriteLine("Direction: " + sender.Direction + ", Magnitude: " + sender.Magnitude);
+
             if (sender.Direction == this.ControllerDirection)
             {
                 return;
             }
+            this.ControllerDirection = sender.Direction;
 
-            FoundLocalControlsWorking = true;
-            Debug.WriteLine("Direction: " + sender.Direction + ", Magnitude: " + sender.Magnitude);
+            //FoundLocalControlsWorking = true;
 
             await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 switch (sender.Direction)
                 {
-                    case ControllerDirection.None:
-                        break;
                     case ControllerDirection.Up:
-                        Speed(0.5);
-                        break;
-                    case ControllerDirection.UpRight:
-                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
+                        Speed(1);
                         break;
                     case ControllerDirection.Right:
-                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
-                        break;
-                    case ControllerDirection.DownRight:
-                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 225;
+                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 400;
                         break;
                     case ControllerDirection.Down:
-                        Speed(2);
-                        break;
-                    case ControllerDirection.DownLeft:
-                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
+                        Speed(3);
                         break;
                     case ControllerDirection.Left:
-                        ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
-                        break;
-                    case ControllerDirection.UpLeft:
                         ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
                         break;
                     default:

@@ -5,74 +5,67 @@
     xmlns:local="using:Driver"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="600" Width="600" MaxHeight="600" MaxWidth="600">
-    <Grid Height="600" Width="600" Background="Gray">
+    mc:Ignorable="d" Height="800" Width="1200">
+    <Grid Height="800" Width="1200">
         <Grid.Resources>
             <Storyboard x:Name="DriveStoryboard">
                 <DoubleAnimation Storyboard.TargetName="CarImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" BeginTime="0" Duration="0:0:0.3" From="-3" To="3" RepeatBehavior="Forever" AutoReverse="True" />
-                <DoubleAnimation Storyboard.TargetName="LineImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="328" RepeatBehavior="Forever" />
-                <DoubleAnimation Storyboard.TargetName="LineImage2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="328" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="LineImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="400" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="LineImage2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="400" RepeatBehavior="Forever" />
             </Storyboard>
             <Storyboard x:Name="ApproachStoryboard">
-                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:2" From="0" To="-150" />
-                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="200" />
-                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0" Duration="0:0:2" From="1" To="3" />
-                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0" Duration="0:0:2" From="1" To="3" />
-                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:2" From="0" To="50" />
-                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="225" />
-                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0" Duration="0:0:2" From="1" To="3" />
-                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0" Duration="0:0:2" From="1" To="3" />
+                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:3" From="0" To="-200" />
+                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:3" From="0" To="200" />
+                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0" Duration="0:0:3" From="1" To="2" />
+                <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0" Duration="0:0:3" From="1" To="2" />
+                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:3" From="0" To="70" />
+                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:3" From="0" To="180" />
+                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0" Duration="0:0:3" From="1" To="3" />
+                <DoubleAnimation Storyboard.TargetName="RockImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0" Duration="0:0:3" From="1" To="3" />
             </Storyboard>
         </Grid.Resources>
-
-        <StackPanel Height="360" VerticalAlignment="Bottom">
+        <StackPanel Height="400" VerticalAlignment="Bottom">
             <StackPanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Resources/road.png"/>
             </StackPanel.Background>
         </StackPanel>
 
-        <Image x:Name="LineImage2" HorizontalAlignment="Left" Height="328" Margin="270,-88,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines2.png">
+        <Image x:Name="LineImage2" HorizontalAlignment="Left" Height="380" Margin="558,0,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines2.png">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>
         </Image>
 
-        <StackPanel Height="240" VerticalAlignment="Top">
+        <StackPanel Height="400" VerticalAlignment="Top">
             <StackPanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Resources/sky.png"/>
             </StackPanel.Background>
-            <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="20" Height="20" Margin="10" HorizontalAlignment="Right"/>
-            <!--<Button x:Name="TreeButton" Content="Tree" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="TreeButton_Click"/>
-            <Button x:Name="RockButton" Content="Rock" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="RockButton_Click"/>
-            <Button x:Name="LeftButton" Content="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="LeftButton_Click"/>
-            <Button x:Name="RightButton" Content="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="RightButton_Click"/>
-            <Button x:Name="SpeedDownButton" Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SpeedDownButton_Click"/>
-            <Button x:Name="SpeedUpButton" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SpeedUpButton_Click"/>-->
+            <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="20" Height="20" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBlock x:Name="LinkTextBlock" TextWrapping="Wrap" Text="http://bit.ly/1HgB2Eu" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" TextAlignment="Center"/>
         </StackPanel>
 
-        <Image x:Name="LineImage" HorizontalAlignment="Left" Height="328" Margin="270,240,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
+        <Image x:Name="LineImage" HorizontalAlignment="Left" Height="380" Margin="558,413,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="TreeImage" Source="Resources/tree.png" Margin="235,188,312,360" Visibility="Collapsed">
+        <StackPanel Height="199" VerticalAlignment="Bottom" Margin="0,0,0,-199" Background="#FFFFFF"/>
+        <Image x:Name="RockImage" HorizontalAlignment="Left" Height="91" Margin="597,333,0,0" VerticalAlignment="Top" Width="91" Source="Resources/rock.png" Visibility="Collapsed">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="RockImage" HorizontalAlignment="Left" Height="58" Margin="293,188,0,0" VerticalAlignment="Top" Width="59" Source="Resources/rock.png" Visibility="Collapsed">
+        <Image x:Name="TreeImage" Source="Resources/tree.png" Margin="460,280,623,394" Visibility="Collapsed">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>
         </Image>
-
-        <Image x:Name="CrashImage" Source="Resources/crash.png" Margin="124,376,366,32" Visibility="Collapsed">
+        <Image x:Name="CrashImage" Source="Resources/crash.png" Margin="280,514,647,74" Visibility="Collapsed">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>
         </Image>
-
-        <Image x:Name="CarImage" Source="Resources/car.png" Margin="124,456,366,32" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="CarImage" Source="Resources/car.png" Margin="252,588,698,50" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>
