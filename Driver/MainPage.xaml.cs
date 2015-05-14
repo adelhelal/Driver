@@ -7,6 +7,7 @@ using Windows.ApplicationModel.Core;
 using Windows.Devices.Enumeration;
 using Windows.Devices.Gpio;
 using Windows.Devices.HumanInterfaceDevice;
+using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -57,6 +58,8 @@ namespace Driver
             //Unloaded += MainPage_Unloaded;
 
             InitGPIO();
+
+            Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
         }
 
         async private void ApproachStoryboard_Completed(object sender, object e)
@@ -311,6 +314,27 @@ namespace Driver
             {
                 FlipLED();
             });
+        }
+
+        private void CoreWindow_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
+        {
+            switch (args.VirtualKey)
+            {
+                case VirtualKey.Up:
+                    Speed(1);
+                    break;
+                case VirtualKey.Right:
+                    ((CompositeTransform)CarImage.RenderTransform).TranslateX = 400;
+                    break;
+                case VirtualKey.Down:
+                    Speed(3);
+                    break;
+                case VirtualKey.Left:
+                    ((CompositeTransform)CarImage.RenderTransform).TranslateX = 0;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
