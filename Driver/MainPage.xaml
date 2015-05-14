@@ -45,6 +45,8 @@
             <Button x:Name="RockButton" Content="Rock" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="RockButton_Click"/>
             <Button x:Name="LeftButton" Content="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="LeftButton_Click"/>
             <Button x:Name="RightButton" Content="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="RightButton_Click"/>
+            <Button x:Name="SpeedDownButton" Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SpeedDownButton_Click"/>
+            <Button x:Name="SpeedUpButton" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SpeedUpButton_Click"/>
         </StackPanel>
 
         <Image x:Name="LineImage" HorizontalAlignment="Left" Height="328" Margin="270,240,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
@@ -58,6 +60,12 @@
             </Image.RenderTransform>
         </Image>
         <Image x:Name="RockImage" HorizontalAlignment="Left" Height="58" Margin="293,188,0,0" VerticalAlignment="Top" Width="59" Source="Resources/rock.png" Visibility="Collapsed">
+            <Image.RenderTransform>
+                <CompositeTransform />
+            </Image.RenderTransform>
+        </Image>
+
+        <Image x:Name="CrashImage" Source="Resources/crash.png" Margin="124,376,366,32" Visibility="Collapsed">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>

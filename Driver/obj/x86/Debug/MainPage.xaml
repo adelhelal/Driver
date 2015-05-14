@@ -41,10 +41,12 @@
             <StackPanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Resources/sky.png"/>
             </StackPanel.Background>
-            <Button x:ConnectionId='8' x:Name="TreeButton" Content="Tree" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         />
-            <Button x:ConnectionId='9' x:Name="RockButton" Content="Rock" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         />
-            <Button x:ConnectionId='10' x:Name="LeftButton" Content="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         />
-            <Button x:ConnectionId='11' x:Name="RightButton" Content="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                          />
+            <Button x:ConnectionId='9' x:Name="TreeButton" Content="Tree" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         />
+            <Button x:ConnectionId='10' x:Name="RockButton" Content="Rock" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         />
+            <Button x:ConnectionId='11' x:Name="LeftButton" Content="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         />
+            <Button x:ConnectionId='12' x:Name="RightButton" Content="Right" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                          />
+            <Button x:ConnectionId='13' x:Name="SpeedDownButton" Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                              />
+            <Button x:ConnectionId='14' x:Name="SpeedUpButton" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                            />
         </StackPanel>
 
         <Image x:ConnectionId='4' x:Name="LineImage" HorizontalAlignment="Left" Height="328" Margin="270,240,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
@@ -63,7 +65,13 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image x:ConnectionId='7' x:Name="CarImage" Source="Resources/car.png" Margin="124,456,366,32" RenderTransformOrigin="0.5,0.5">
+        <Image x:ConnectionId='7' x:Name="CrashImage" Source="Resources/crash.png" Margin="124,376,366,32" Visibility="Collapsed">
+            <Image.RenderTransform>
+                <CompositeTransform />
+            </Image.RenderTransform>
+        </Image>
+
+        <Image x:ConnectionId='8' x:Name="CarImage" Source="Resources/car.png" Margin="124,456,366,32" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <CompositeTransform />
             </Image.RenderTransform>

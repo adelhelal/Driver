@@ -20,7 +20,7 @@
     <AppXManifest Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-05-13T09:17:43.747</Modified>
+      <Modified>2015-05-14T06:01:25.398</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -62,7 +62,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Driver.exe">
       <PackagePath>Driver.exe</PackagePath>
-      <Modified>2015-05-13T09:17:43.275</Modified>
+      <Modified>2015-05-14T06:01:24.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Driver.xr.xml">
       <PackagePath>Driver.xr.xml</PackagePath>
@@ -110,11 +110,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-05-13T09:17:44.469</Modified>
+      <Modified>2015-05-14T06:01:26.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\car.png">
       <PackagePath>Resources\car.png</PackagePath>
       <Modified>2015-05-13T08:26:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\crash.png">
+      <PackagePath>Resources\crash.png</PackagePath>
+      <Modified>2015-05-13T09:00:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\lines.png">
       <PackagePath>Resources\lines.png</PackagePath>

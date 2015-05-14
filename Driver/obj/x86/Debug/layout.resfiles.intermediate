@@ -9,6 +9,7 @@ ApplicationInsights.config
 ApplicationInsights.config
 Properties\Default.rd.xml
 Resources\car.png
+Resources\crash.png
 Resources\lines.png
 Resources\lines2.png
 Resources\road.png

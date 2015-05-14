@@ -116,6 +116,7 @@
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\WideLogo.scale-100.png" />
     <Content Include="Resources\car.png" />
+    <Content Include="Resources\crash.png" />
     <Content Include="Resources\lines.png" />
     <Content Include="Resources\lines2.png" />
     <Content Include="Resources\road.png" />

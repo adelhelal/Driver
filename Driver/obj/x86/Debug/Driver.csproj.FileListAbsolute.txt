@@ -253,6 +253,8 @@ C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug
 C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\obj\x86\Debug\Core\Resources\sky.png
 C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\car.png
 C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\obj\x86\Debug\Core\Resources\car.png
+C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\crash.png
+C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\obj\x86\Debug\Core\Resources\crash.png
 C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\obj\x86\Debug\Microsoft.Diagnostics.Tracing.EventSource\layout.resfiles
 C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\obj\x86\Debug\Microsoft.Diagnostics.Tracing.EventSource\layout.resfiles.intermediate
 C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\obj\x86\Debug\Microsoft.Diagnostics.Tracing.EventSource\Resources.resfiles

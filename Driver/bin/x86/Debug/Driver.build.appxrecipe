@@ -85,6 +85,9 @@
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\car.png">
       <PackagePath>Resources\car.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\crash.png">
+      <PackagePath>Resources\crash.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adelh\Documents\Visual Studio 2015\Projects\Driver\Driver\bin\x86\Debug\Core\Resources\lines.png">
       <PackagePath>Resources\lines.png</PackagePath>
     </AppxPackagedFile>

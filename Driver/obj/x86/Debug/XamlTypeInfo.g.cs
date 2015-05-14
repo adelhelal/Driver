@@ -132,15 +132,17 @@ namespace Driver.Driver_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[4];
             _typeNameTable[0] = "Driver.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "Boolean";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[4];
             _typeTable[0] = typeof(global::Driver.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::System.Boolean);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -190,6 +192,7 @@ namespace Driver.Driver_XamlTypeInfo
             case 0:   //  Driver.MainPage
                 userType = new global::Driver.Driver_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
+                userType.AddMemberName("Approaching");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -201,16 +204,40 @@ namespace Driver.Driver_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Driver.Driver_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
+
+            case 3:   //  Boolean
+                xamlType = new global::Driver.Driver_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
             }
             return xamlType;
         }
 
 
+        private object get_0_MainPage_Approaching(object instance)
+        {
+            var that = (global::Driver.MainPage)instance;
+            return that.Approaching;
+        }
+        private void set_0_MainPage_Approaching(object instance, object Value)
+        {
+            var that = (global::Driver.MainPage)instance;
+            that.Approaching = (global::System.Boolean)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::Driver.Driver_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::Driver.Driver_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "Driver.MainPage.Approaching":
+                userType = (global::Driver.Driver_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Driver.MainPage");
+                xamlMember = new global::Driver.Driver_XamlTypeInfo.XamlMember(this, "Approaching", "Boolean");
+                xamlMember.Getter = get_0_MainPage_Approaching;
+                xamlMember.Setter = set_0_MainPage_Approaching;
+                break;
+            }
             return xamlMember;
         }
     }
