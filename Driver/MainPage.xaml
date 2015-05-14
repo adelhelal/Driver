@@ -41,7 +41,7 @@
                 <ImageBrush Stretch="Fill" ImageSource="Resources/sky.png"/>
             </StackPanel.Background>
             <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="20" Height="20" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBlock x:Name="LinkTextBlock" TextWrapping="Wrap" Text="http://goo.gl/susv9x" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" TextAlignment="Center"/>
+            <TextBlock x:Name="LinkTextBlock" TextWrapping="Wrap" Text="http://bit.do/votedrive" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" TextAlignment="Center"/>
         </StackPanel>
 
         <Image x:Name="LineImage" HorizontalAlignment="Left" Height="380" Margin="558,413,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
