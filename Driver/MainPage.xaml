@@ -12,6 +12,22 @@
                 <DoubleAnimation Storyboard.TargetName="CarImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" BeginTime="0" Duration="0:0:0.3" From="-3" To="3" RepeatBehavior="Forever" AutoReverse="True" />
                 <DoubleAnimation Storyboard.TargetName="LineImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="400" RepeatBehavior="Forever" />
                 <DoubleAnimation Storyboard.TargetName="LineImage2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="400" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardAdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:2" From="0" To="-500" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardAdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="300" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardAdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardAdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="AdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:2" From="0" To="-475" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="AdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0" Duration="0:0:2" From="0" To="325" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="AdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="AdImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardKimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0:0:1" Duration="0:0:2" From="0" To="500" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardKimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0:0:1" Duration="0:0:2" From="0" To="300" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardKimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0:0:1" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="BillboardKimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0:0:1" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="KimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0:0:1" Duration="0:0:2" From="0" To="525" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="KimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" BeginTime="0:0:1" Duration="0:0:2" From="0" To="325" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="KimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" BeginTime="0:0:1" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
+                <DoubleAnimation Storyboard.TargetName="KimImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" BeginTime="0:0:1" Duration="0:0:2" From="1" To="2" RepeatBehavior="Forever" />
             </Storyboard>
             <Storyboard x:Name="ApproachStoryboard">
                 <DoubleAnimation Storyboard.TargetName="TreeImage" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" BeginTime="0" Duration="0:0:3" From="0" To="-200" />
@@ -42,7 +58,6 @@
             </StackPanel.Background>
             <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="20" Height="20" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             <TextBlock x:Name="LinkTextBlock" TextWrapping="Wrap" Text="http://bit.do/votedrive" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" TextAlignment="Center"/>
-            <Image x:Name="image" Height="184" Source="Resources/Light_300x250animated.gif" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="236" Margin="20,0,150,0" />
         </StackPanel>
 
         <Image x:Name="LineImage" HorizontalAlignment="Left" Height="380" Margin="558,413,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
@@ -71,6 +86,29 @@
                 <CompositeTransform />
             </Image.RenderTransform>
         </Image>
+
+        <Image x:Name="BillboardAdImage" Height="135" Width="135" Source="Resources/billboard.png" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="252,0,0,370">
+            <Image.RenderTransform>
+                <CompositeTransform />
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="AdImage" Height="70" Source="Resources/ad.gif" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Margin="280,0,0,420">
+            <Image.RenderTransform>
+                <CompositeTransform />
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BillboardKimImage" Height="135" Width="135" Source="Resources/billboard.png" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="778,0,0,370">
+            <Image.RenderTransform>
+                <CompositeTransform />
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="KimImage" Height="70" Source="Resources/kim.png" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Margin="802,0,0,420">
+            <Image.RenderTransform>
+                <CompositeTransform />
+            </Image.RenderTransform>
+        </Image>
+        <StackPanel Height="999" VerticalAlignment="Bottom" Margin="-512,0,1205,-199" Background="#FFFFFF"/>
+        <StackPanel Height="999" VerticalAlignment="Bottom" Margin="1205,0,-512,-199" Background="#FFFFFF"/>
 
     </Grid>
 </Page>

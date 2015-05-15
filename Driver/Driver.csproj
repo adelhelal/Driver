@@ -116,9 +116,11 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="Resources\billboard.png" />
     <Content Include="Resources\car.png" />
     <Content Include="Resources\crash.png" />
-    <Content Include="Resources\Light_300x250animated.gif" />
+    <Content Include="Resources\ad.gif" />
+    <Content Include="Resources\kim.png" />
     <Content Include="Resources\lines.png" />
     <Content Include="Resources\lines2.png" />
     <Content Include="Resources\road.png" />
