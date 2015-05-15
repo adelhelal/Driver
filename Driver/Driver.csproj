@@ -110,6 +110,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Light_300x250animated.gif" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
@@ -118,6 +119,7 @@
     <Content Include="Assets\WideLogo.scale-100.png" />
     <Content Include="Resources\car.png" />
     <Content Include="Resources\crash.png" />
+    <Content Include="Resources\Light_300x250animated.gif" />
     <Content Include="Resources\lines.png" />
     <Content Include="Resources\lines2.png" />
     <Content Include="Resources\road.png" />

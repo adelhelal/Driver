@@ -42,6 +42,7 @@
             </StackPanel.Background>
             <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="20" Height="20" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             <TextBlock x:Name="LinkTextBlock" TextWrapping="Wrap" Text="http://bit.do/votedrive" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" TextAlignment="Center"/>
+            <Image x:Name="image" Height="184" Source="Resources/Light_300x250animated.gif" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="236" Margin="20,0,150,0" />
         </StackPanel>
 
         <Image x:Name="LineImage" HorizontalAlignment="Left" Height="380" Margin="558,413,0,0" VerticalAlignment="Top" Width="34" Source="Resources/lines.png">
